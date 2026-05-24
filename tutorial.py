@@ -2,14 +2,11 @@
 import tkinter as tk
 from tkinter import ttk
 
-# IMPORTANDO LA FUNCION DE CONVERSION
-from conversiones import feetToMeters
-
 # REALIZANDO EL CÁLCULO
 def calculate(*args):
     try:
         value = float(feet.get())
-        meters.set(round(feetToMeters(value), 4))
+        meters.set(round(value*0.3048, 4))
     except ValueError:
         pass
 
